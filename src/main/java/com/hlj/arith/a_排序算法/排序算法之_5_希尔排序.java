@@ -28,8 +28,8 @@ public class 排序算法之_5_希尔排序 {
                 // 这里的每一趟相当于是一次插入排序的排序算法，不同的是，这里是从前往后
                 for (int j = i; j < nums.length - incr; j = j + incr) {
                     if (nums[j] > nums[j + incr]) {
-                        int temp = nums[i];
-                        nums[i] = nums[j];
+                        int temp = nums[j + incr];
+                        nums[j + incr] = nums[j];
                         nums[j] = temp;
                     }
                 }

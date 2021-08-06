@@ -6,7 +6,7 @@ import org.junit.Test;
  * @author HealerJean
  * @ClassName Z01_爬楼梯
  * @date 2020/1/19  11:40.
- * @Description
+ * @Description 有一座高度是10级台阶的楼梯，从下往上走，每跨一步只能向上1级或者2级台阶。要求用程序来求出一共有多少种走法。**
  */
 public class Z01_1_爬楼梯_递归 {
 

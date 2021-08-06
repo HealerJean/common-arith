@@ -34,7 +34,8 @@ public class 合并二叉树 {
         System.out.println(mergeTrees(initTreeNode(), initTreeNode()));
     }
 
-    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+
+        public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null) {
             return t2;
         }

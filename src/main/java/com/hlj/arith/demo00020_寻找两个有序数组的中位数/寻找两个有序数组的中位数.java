@@ -34,7 +34,6 @@ public class 寻找两个有序数组的中位数 {
             return findMedianSortedArrays(B, A);
         }
 
-
         //增加i的方式使用折半查找,下面有i的边界判断，所以这里imax = m即可
         int iMin = 0, iMax = m ;
 

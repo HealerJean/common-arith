@@ -45,9 +45,6 @@ public class 从中序与后序遍历序列构造二叉树 {
         int size = in_root_index - in_left_index ;
 
 
-
-
-
         root.left =  createTree(map ,inorder, postorder, in_left_index , in_root_index - 1, post_left_index, post_left_index + size  -1) ;
 
         root.right =  createTree(map ,inorder, postorder, in_root_index+1, in_right_index, post_left_index + size , post_right_index-1) ;

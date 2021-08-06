@@ -24,7 +24,6 @@ public class 第一个只出现一次的字符 {
     }
 
     public char firstUniqChar(String s) {
-        List<Map<Character, Integer>> list = new ArrayList<>();
         Map<Character, Integer> map = new HashMap<>();
         for (Character ch : s.toCharArray()){
             map.put(ch, map.getOrDefault( ch,0) +1);

@@ -14,6 +14,18 @@ import org.junit.Test;
  */
 public class 百元买百鸡 {
 
+
+    public void testM() {
+        for (int x = 1; x <= 20; x++) {
+            for (int y = 1; y < 100 - x; y++) {
+                int z = 100 - x - y;
+                if (z % 3 == 0) {
+
+                }
+            }
+        }
+    }
+
     @Test
     public void test() {
         //这里的20,100是指个数，而且不排除一只公鸡/母鸡也没有

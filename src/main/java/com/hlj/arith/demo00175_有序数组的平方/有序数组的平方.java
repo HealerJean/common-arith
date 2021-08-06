@@ -21,7 +21,7 @@ public class 有序数组的平方 {
     @Test
     public void test() {
         int[] A = {-4, -1, 0, 3, 10};
-        System.out.println(Arrays.toString(sortedSquares(A)));
+        // System.out.println(Arrays.toString(sortedSquares(A)));
         System.out.println(Arrays.toString(sortedSquares2(A)));
     }
 
@@ -56,9 +56,9 @@ public class 有序数组的平方 {
                 res[index] = A[right] * A[right];
                 right--;
             }
+            //每次放入东西index要减去
+            index--;
         }
-        //每次放入东西index要减去
-        index--;
         return res;
     }
 

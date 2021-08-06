@@ -8,7 +8,7 @@ package com.hlj;
  */
 public class SingleBean {
 
-    private final static SingleBean instance = null;
+    private  static SingleBean instance = null;
 
     private SingleBean() {
     }

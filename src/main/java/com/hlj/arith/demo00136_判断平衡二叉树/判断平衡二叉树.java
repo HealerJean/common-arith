@@ -63,7 +63,7 @@ public class 判断平衡二叉树 {
         if (root == null) {
             return true;
         } else {
-            return Math.abs(height(root.left) - height(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
+            return Math.abs(height(root.left) - height(root.right)) <= 1 && isBalanced2(root.left) && isBalanced2(root.right);
         }
     }
 

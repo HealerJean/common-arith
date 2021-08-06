@@ -15,6 +15,8 @@ import java.util.Arrays;
  */
 public class 合并两个有序数组_1 {
 
+
+
     @Test
     public void test() {
         int a[] = {7, 6, 5, 4, 3, 2, 1, 0};
@@ -23,26 +25,19 @@ public class 合并两个有序数组_1 {
         //保证两个数组同时遍历
         while (i < a.length && j < b.length) {
             if (a[i] > b[j]) {
-                c[n] = a[i];
-                i++;
+                c[n++] = a[i++];
             } else {
-                c[n] = b[j];
-                j++;
+                c[n++] = b[j++];
             }
-            n++;
         }
 
         //上面有一方会提前结束
         while (i < a.length) {
-            c[n] = a[i];
-            i++;
-            n++;
+            c[n++] = a[i++];
         }
 
         while (j < b.length) {
-            c[n] = b[j];
-            j++;
-            n++;
+            c[n++] = b[j++];
         }
 
         System.out.println(Arrays.toString(c));

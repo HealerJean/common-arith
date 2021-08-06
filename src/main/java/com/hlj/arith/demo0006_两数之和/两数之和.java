@@ -36,6 +36,11 @@ public class 两数之和 {
         throw new IllegalArgumentException("No two sum solution");
     }
 
+
+    @Test
+    public void testM(){
+
+    }
     /**
      * 方法一：一遍哈希表
      * 解题思路：利用一个map将所有的值填进去

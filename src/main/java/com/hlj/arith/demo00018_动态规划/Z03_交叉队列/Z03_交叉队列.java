@@ -45,13 +45,16 @@ public class Z03_交叉队列 {
                 dp[i][0] = dp[i - 1][0];
             }
         }
+
+
+
+
         //初始化数组第1hang
         for (int i = 1; i <= len2; i++) {
             if (arr1[1].charAt(i - 1) == arr1[2].charAt(i - 1)) {
                 dp[0][i] = dp[0][i - 1];
             }
         }
-
 
 
         // dp
@@ -73,6 +76,11 @@ public class Z03_交叉队列 {
         }
         return false + "";
     }
+
+
+
+
+
 
 
 }

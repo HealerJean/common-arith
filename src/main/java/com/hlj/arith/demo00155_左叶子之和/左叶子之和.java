@@ -26,12 +26,12 @@ public class 左叶子之和 {
 
     public int sumOfLeftLeaves(TreeNode root) {
         //如果是空的，则返回0，只有首次的时候才回进入
-        if (root == null) {
+        if (root == null){
             return 0;
         }
 
         //做节点的值
-        int leftVal = 0;
+        int leftVal = 0 ;
         //如果左节点不等于空
         if (root.left != null) {
             //如果是叶子节点，则直接获取值即可。否则该节点不是叶子节点，则继续遍历
@@ -43,10 +43,10 @@ public class 左叶子之和 {
         }
 
         //右节点的值
-        int rightVal = 0;
-        if (root.right != null && !isLeafNode(root.right)) {
+        int rightVal = 0 ;
+        if (root.right != null  && !isLeafNode(root.right)) {
             //只有当不是叶子节点的时候才 会进行回溯
-            rightVal = sumOfLeftLeaves(root.right);
+            rightVal =sumOfLeftLeaves(root.right);
         }
         return leftVal + rightVal;
     }
@@ -58,10 +58,10 @@ public class 左叶子之和 {
 
 
     public TreeNode initTreeNode(){
-        // TreeNode treeNode7 = new TreeNode(7, null ,null);
-        // TreeNode treeNode15 = new TreeNode(15, null , null);
-        // TreeNode treeNode20 = new TreeNode(20, treeNode15, treeNode7);
-        // TreeNode treeNode9 = new TreeNode(9, null, null);
+        TreeNode treeNode7 = new TreeNode(7, null ,null);
+        TreeNode treeNode15 = new TreeNode(15, null , null);
+        TreeNode treeNode20 = new TreeNode(20, treeNode15, treeNode7);
+        TreeNode treeNode9 = new TreeNode(9, null, null);
         TreeNode root3 = new TreeNode(3, null, null);
         return root3 ;
     }

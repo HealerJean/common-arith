@@ -47,7 +47,7 @@ public class 组合总和_1 {
         // 排序是为了提前终止搜索，当然也不可以不排序
         // Arrays.sort(candidates);
         List<List<Integer>> res = new ArrayList<>();
-        Stack<Integer> stack = new Stack<>();
+        LinkedList<Integer> stack = new LinkedList<>();
         dfs(target, 0, stack, candidates, res);
         return res;
     }
@@ -56,10 +56,10 @@ public class 组合总和_1 {
     /**
      * 深度遍历
      */
-    public void dfs(int target, int index, Stack<Integer> stack, int[] candidates, List<List<Integer>> res) {
+    public void dfs(int target, int index, LinkedList<Integer> linkedList, int[] candidates, List<List<Integer>> res) {
         //等于零说明结果符合要求，将栈里面的数据取出来放到结果List中去
         if (target == 0) {
-            res.add(new ArrayList<>(stack));
+            res.add(new ArrayList<>(linkedList));
             return;
         }
 
@@ -68,11 +68,11 @@ public class 组合总和_1 {
         for (int i = index; i < candidates.length; i++) {
             //如果减数大于目标值，则差为负数，不符合结果
             if (candidates[i] <= target) {
-                stack.push(candidates[i]);
+                linkedList.add(candidates[i]);
                 //目标值减去元素值，
-                dfs(target - candidates[i], i, stack, candidates, res);
+                dfs(target - candidates[i], i, linkedList, candidates, res);
                 //如果能走到这里，说明回溯已经完成了，或者有了结果，或者没有结果，因为走多了，所以要回退到上一个节点。具体debug一遍就知道了
-                stack.pop();
+                linkedList.removeLast();
             }
         }
     }

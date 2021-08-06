@@ -56,12 +56,29 @@ public class D2_中序遍历 {
             //消化队列中的数据
             if (!stack.isEmpty()) {
                 node = stack.pop();
-                System.out.println(node.left);
+                System.out.println(node.val);
                 node = node.right;
             }
         }
     }
 
+
+    @Test
+    public void testM(){
+        TreeNode node = initTreeNode();
+        Stack<TreeNode> stack = new Stack<>();
+        while (node != null || !stack.isEmpty()){
+            while (node != null){
+                stack.push(node);
+                node = node.left;
+            }
+            if (!stack.isEmpty()){
+                node = stack.pop();
+                System.out.println(node.val);
+                node = node.right;
+            }
+        }
+    }
 
     /**
      * 初始化二叉树：

@@ -40,12 +40,11 @@ public class 单词搜索 {
     }
 
     public boolean exist(char[][] board, String word) {
-        boolean[][] used = new boolean[board.length][board[0].length];
         boolean flag = false;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 if (board[i][j] == word.charAt(0)) {
-                    flag = dfs(0, i, j, board, word, used);
+                    flag = dfs(0, i, j, board, word);
                     if (flag){
                         return true;
                     }
@@ -56,7 +55,7 @@ public class 单词搜索 {
     }
 
 
-    public boolean dfs(int index, int i, int j, char[][] board, String word, boolean[][] used) {
+    public boolean dfs(int index, int i, int j, char[][] board, String word) {
         //终结条件
         if (index == word.length()) {
             return true;
@@ -68,10 +67,10 @@ public class 单词搜索 {
             // 放到一个临时的位置，当搜索结束要记得放回去。这样后面的数据还可以接着遍历
             char temp = board[i][j];
             board[i][j] = '0';
-            boolean flag = dfs(index + 1, i + 1, j, board, word, used)
-                    || dfs(index + 1, i - 1, j, board, word, used)
-                    || dfs(index + 1, i, j + 1, board, word, used)
-                    || dfs(index + 1, i, j - 1, board, word, used);
+            boolean flag = dfs(index + 1, i + 1, j, board, word)
+                    || dfs(index + 1, i - 1, j, board, word)
+                    || dfs(index + 1, i, j + 1, board, word)
+                    || dfs(index + 1, i, j - 1, board, word);
             //遍历结束，放回去
             board[i][j] = temp;
             return flag;

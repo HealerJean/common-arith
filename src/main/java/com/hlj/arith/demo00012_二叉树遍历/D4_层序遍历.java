@@ -107,6 +107,26 @@ public class D4_层序遍历 {
         }
     }
 
+    @Test
+    public void testM(){
+        TreeNode node = initTreeNode();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(node);
+        while (!queue.isEmpty()){
+            int size = queue.size();
+            while (size > 0){
+                node = queue.remove();
+                size--;
+                System.out.println(node.val);
+                if (node.right != null){
+                    queue.add(node.right);
+                }
+                if (node.left != null){
+                    queue.add(node.left);
+                }
+            }
+        }
+    }
 
 
 

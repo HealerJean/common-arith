@@ -47,7 +47,7 @@ public class 最长上升子序列 {
             int temLen = 0; //初始为,后面最少也会加1
             //每轮求出最大长度
             for (int j = 0; j < i; j++) {
-                //dp[j] 为当前0 到i 的时候的最长的子序列的长度。下面的比较其实就是
+                //dp[j] 为当前0 到j 的时候的最长的子序列的长度。下面的比较其实就是
                 if (nums[j] < nums[i]  ) {
                     temLen = Math.max(temLen, dp[j]);
                 }

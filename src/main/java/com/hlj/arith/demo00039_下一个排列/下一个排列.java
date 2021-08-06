@@ -13,7 +13,7 @@ import java.util.Arrays;
  1,2,3 → 1,3,2
  3,2,1 → 1,2,3
  1,1,5 → 1,5,1
- 1,5,8,4,7,6,5,3,1 ->1,5,8,5,7,6,4,3,1
+ 1,5,8,4,7,6,5,3,1 -> [1, 5, 8, 5, 1, 3, 4, 6, 7]
  解题思路：
 */
 public class 下一个排列 {
@@ -22,7 +22,7 @@ public class 下一个排列 {
     @Test
     public void test() {
         // int[] nums = new int[]{3, 2, 1};
-        int[] nums = new int[]{1, 2, 3, 2};
+        int[] nums = new int[]{1,5,8,4,7,6,5,3,1};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }

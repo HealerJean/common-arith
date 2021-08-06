@@ -55,6 +55,7 @@ public class _132模式 {
                 while (!stack.isEmpty() &&  min[i] >=stack.peek()) {
                     stack.pop();
                 }
+                //此时 如果下面成立，则   min[i] 肯定小于 stack.peek()
                 if (!stack.isEmpty() &&  nums[i] > stack.peek()) {
                     return true;
                 }
