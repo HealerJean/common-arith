@@ -16,7 +16,7 @@ import java.util.List;
 解题思路：
     看代码马上就能懂，就是使用了一个 LinkedList
  */
-public class 不使用递归进行文件遍历 {
+public class D2_不使用递归进行文件遍历 {
 
     @Test
     public void test(){

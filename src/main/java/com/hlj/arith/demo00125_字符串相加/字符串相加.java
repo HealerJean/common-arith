@@ -18,6 +18,7 @@ public class 字符串相加 {
     @Test
     public void test() {
         System.out.println(addStrings("9", "99"));
+        System.out.println('a'-'a');
     }
 
 
