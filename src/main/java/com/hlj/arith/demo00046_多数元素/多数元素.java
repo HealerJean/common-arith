@@ -19,8 +19,8 @@ import org.junit.Test;
 public class 多数元素 {
 
     @Test
-    public void test(){
-        int[] nums = {2,2,2,2,1,2,2} ;
+    public void test() {
+        int[] nums = {2, 2, 2, 2, 1, 2, 2};
         System.out.println(majorityElement(nums));
     }
 
@@ -29,24 +29,33 @@ public class 多数元素 {
         int num = nums[0];
         //count 记录是否要删除
         int count = 1;
-        for(int i = 1; i < nums.length ; i++){
-            if(nums[i] == num){
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == num) {
                 //当前相等的count个数
                 count++;
-            }else{
-                if(count > 1){
-                  // 这里虽然显示的是--，但是其实减去了2个数据，当前的i和上一个已经匹配相等的数据
+            } else {
+                if (count > 1) {
+                    // 这里虽然显示的是--，但是其实减去了2个数据，当前的i和上一个已经匹配相等的数据
                     count--;
                     //如果此时不相等，count等于1，则表示，目前仅存的两个是相等的，要删除，
                     // 同时i要重新开始匹配 i + 1 + 1 为新开始的数字（要先i ++ 因为后面for'循环还有一个i ++）
-                }else if (count == 1){
+                } else if (count == 1) {
                     num = nums[i + 1];
                     count = 1;
                     i++;
                 }
             }
         }
-        return num;
+
+
+        int fCount = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == num) {
+                fCount++;
+            }
+        }
+
+        return fCount / 2 > 0 ? num : null;
     }
 
 
